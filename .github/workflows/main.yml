@@ -16,8 +16,8 @@ jobs:
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws_access_key_id: ${{ secrets.aws_key_id }}
-          aws_secret_access_key: ${{ secrets.aws_secret_access_key }}
+          aws_access_key_id: ${{ secrets.aws_creds.aws_key_id }}
+          aws_secret_access_key: ${{ secrets.aws_creds.aws_secret_access_key }}
           aws-region: ap-south-1
           
       - name: Deploy to S3
